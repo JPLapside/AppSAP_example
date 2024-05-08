@@ -1,0 +1,15 @@
+<div class="container mx-auto text-center">
+    <h3 class="mb-4 text-3xl font-bold">Gallery of images</h3>
+    <div class="row">      
+      <mat-grid-list cols="2" rowHeight="3:1" >
+        <mat-grid-tile *ngFor='let i of dataSource'>       
+          <img src="{{i.previewURL}}" class="img" width="240" height="170"> 
+        </mat-grid-tile>
+      </mat-grid-list>
+      <mat-paginator #paginator [length]="100"
+              [pageSize]="4"
+              [pageSizeOptions]="[4]"
+              aria-label="Select page">
+      </mat-paginator> 
+    </div>    
+</div>
